@@ -1,0 +1,45 @@
+{
+	"schemaVersion": 1,
+	"id": "doom",
+	"version": "0.00",
+	"name": "doom",
+	"description": "The Penultimate Minecraft Mod",
+	"authors": [
+		"Senator Business",
+		"Nickelwrangler446",
+		"Brady Smith",
+		"Claude 3.7 Sonnet",
+		"Gemini 2.0 Flash"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/doom/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.sb.doom.Doom"
+		],
+		"client": [
+			"com.sb.doom.DoomClient"
+		]
+	},
+	"mixins": [
+		"doom.mixins.json",
+		{
+			"config": "doom.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.11",
+		"minecraft": "~1.21.5",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
